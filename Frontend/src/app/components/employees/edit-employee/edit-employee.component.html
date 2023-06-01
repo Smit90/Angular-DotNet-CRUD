@@ -1,0 +1,80 @@
+<div class="container my-5">
+  <h1 class="mb-3">Edit Employee</h1>
+
+  <div class="row">
+    <div class="col-6">
+      <form #form="ngForm" (ngSubmit)="updateEmployee()">
+        <div class="mb-3">
+          <label for="name" class="form-label">Id</label>
+          <input
+            type="text"
+            readonly
+            class="form-control"
+            [(ngModel)]="employeeDetails.id"
+            name="id"
+            id="id"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="employeeDetails.name"
+            name="name"
+            id="name"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            [(ngModel)]="employeeDetails.email"
+            name="email"
+            id="email"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="phone" class="form-label">Phone</label>
+          <input
+            type="number"
+            class="form-control"
+            [(ngModel)]="employeeDetails.phone"
+            name="phone"
+            id="phone"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="salary" class="form-label">Salary</label>
+          <input
+            type="number"
+            class="form-control"
+            [(ngModel)]="employeeDetails.salary"
+            name="salary"
+            id="salary"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="department" class="form-label">Department</label>
+          <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="employeeDetails.department"
+            name="department"
+            id="department"
+          />
+        </div>
+
+        <button type="submit" class="btn btn-primary mr-5">Submit</button>
+        <button
+          type="button"
+          class="btn btn-danger"
+          (click)="deleteEmployee(employeeDetails.id)"
+        >
+          Delete
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
